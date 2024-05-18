@@ -59,6 +59,8 @@ def search_users(args):
                     matching_users.append(user)
                     seen_ids.append(user["id"])
 
+    if args.get("id") is None and args.get("name") is None and args.get("age") is None and args.get("occupation") is None:
+        return USERS
 
     return matching_users
 
